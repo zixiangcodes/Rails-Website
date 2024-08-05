@@ -1,0 +1,26 @@
+<% content_for :page_specific_styles do %>
+  <%= stylesheet_link_tag 'posts', "data-turbo-track": "reload" %>
+<% end %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1><u>Posts</u></h1>
+<h1>Shows the list of posts made so far!</h1>
+<h1>- - - - - - - - </h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %> |
+      <%= link_to 'Edit this post', edit_post_path(post), class: 'btn btn-primary' %>
+      <%= button_to 'Delete this post', post_path(post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+      <br>
+      <h1>- - - - - - - - </h1>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
+<h1>- - - - - - - - </h1>
+<%= link_to 'Back to welcome page!', root_path %> <!-- Link to the welcome page -->

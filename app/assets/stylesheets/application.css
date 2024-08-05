@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a clean, modern font for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 3rem;
+    /* Responsive font size */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style the paragraph text */
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Style the link */
+a {
+    text-decoration: none;
+    color: #007bff;
+    /* Bootstrap blue */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    /* Darker blue for hover effect */
+    text-decoration: underline;
+}
+
+/* Add some spacing and styling to the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button,
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Primary button styles */
+.btn-primary {
+    background-color: #007bff;
+    /* Bootstrap blue */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Darker blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary button styles */
+.btn-secondary {
+    background-color: #6c757d;
+    /* Bootstrap gray */
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    /* Darker gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Delete button styles */
+button[type="submit"] {
+    background-color: #dc3545;
+    /* Bootstrap red */
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #c82333;
+    /* Darker red */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

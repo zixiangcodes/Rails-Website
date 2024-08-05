@@ -1,0 +1,15 @@
+h1 {
+    font-size: 20px;
+}
+
+.delete-button {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d50000;
+}

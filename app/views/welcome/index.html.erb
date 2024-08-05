@@ -1,0 +1,13 @@
+<% content_for :page_specific_styles do %>
+  <%= stylesheet_link_tag 'welcome', "data-turbo-track": "reload" %>
+<% end %>
+
+<div class="container">
+  <h1>Welcome!</h1>
+  <p>This is the home page of "no-name-app"!</p>
+  <p>Click on the "View Posts" link to continue.</p>
+  <%= link_to 'View Posts', posts_path %>
+  <br>
+  <p>Location: app/views/welcome/index.html.erb</p>
+</div>
+
