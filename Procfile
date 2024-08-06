@@ -1,1 +1,1 @@
-web: rm -f /rails/tmp/pids/server.pid && bin/rails server -b 0.0.0.0 -p $PORT
+web: rm -f /rails/tmp/pids/server.pid && bundle exec puma -C config/puma.rb
