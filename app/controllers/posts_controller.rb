@@ -23,6 +23,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    # Remove the image if the remove_image checkbox was checked
+    @post.image.purge if params[:post][:remove_image] == '1'
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
@@ -36,6 +39,10 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
+    if params[:post][:remove_image] == '1'
+      @post.image.purge
+    end
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
@@ -65,6 +72,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :image, :remove_image)
     end
+
 end

@@ -22,6 +22,19 @@
   </div>
 
   <div>
+    <%= form.label :image %>
+      <%= form.file_field :image, accept: 'image/jpeg,image/png', max: 5.megabytes %>
+  </div>
+
+  <% if post.persisted? && post.image.attached? %>
+    <div>
+      <%= image_tag post.image %>
+      <%= form.check_box :remove_image %>
+      <%= form.label :remove_image, "Remove image" %>
+    </div>
+  <% end %>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

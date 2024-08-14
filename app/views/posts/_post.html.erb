@@ -8,4 +8,12 @@
     <%= post.body %>
   </p>
 
+ <% if post.image.attached? %>
+    <p>
+      <%= image_tag post.image, style: "max-width: 750px; height: auto;" %>
+    </p>
+  <% else %>
+    <p>No image attached</p>
+  <% end %>
+
 </div>
