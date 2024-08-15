@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :render
+  config.active_storage.service = :amazon
   config.active_storage.analyze_later = true
   config.active_storage.queues.analysis = :active_storage_analysis
   config.active_storage.queues.purge    = :active_storage_purge
@@ -94,6 +94,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Important
+  # Rails.application.routes.default_url_options = { host: 'https://rails-website.com/', port: 3000}
+  # Add some website name.
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
