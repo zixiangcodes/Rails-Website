@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def edit
   end
 
-  # POST /posts or /posts.json
+ # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
 
@@ -34,6 +34,12 @@ class PostsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    end
+  rescue => e
+    Rails.logger.error("Error creating post: #{e.message}")
+    respond_to do |format|
+      format.html { render :new, status: :unprocessable_entity, notice: 'Error creating post. Please try again.' }
+      format.json { render json: { error: 'Error creating post' }, status: :unprocessable_entity }
     end
   end
 
