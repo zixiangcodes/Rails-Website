@@ -9,9 +9,9 @@
   </p>
 
  <% if post.image.attached? %>
-    <p>
-      <%= image_tag post.image, style: "max-width: 750px; height: auto;" %>
-    </p>
+    <div class="post-image-container">
+      <%= image_tag post.image, class: "responsive-image", style: "max-width: 750px; height: auto;" %>
+    </div>
   <% else %>
     <p>No image attached</p>
   <% end %>
