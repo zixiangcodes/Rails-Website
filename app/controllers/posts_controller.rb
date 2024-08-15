@@ -22,6 +22,7 @@ class PostsController < ApplicationController
  # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    Rails.logger.info("Attempting to create post with params: #{post_params.inspect}")
 
     # Remove the image if the remove_image checkbox was checked
     @post.image.purge if params[:post][:remove_image] == '1'
@@ -37,6 +38,7 @@ class PostsController < ApplicationController
     end
   rescue => e
     Rails.logger.error("Error creating post: #{e.message}")
+    Rails.logger.error(e.backtrace.join("\n"))
     respond_to do |format|
       format.html { render :new, status: :unprocessable_entity, notice: 'Error creating post. Please try again.' }
       format.json { render json: { error: 'Error creating post' }, status: :unprocessable_entity }
@@ -45,12 +47,9 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
-    if params[:post][:remove_image] == '1'
-      @post.image.purge
-    end
-
     respond_to do |format|
       if @post.update(post_params)
+        @post.image.purge if params[:post][:remove_image] == '1'
         format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
