@@ -2,12 +2,16 @@
   <%= stylesheet_link_tag 'welcome', "data-turbo-track": "reload" %>
 <% end %>
 
-<div class="container">
-  <h1>Welcome!</h1>
-  <p>This is the home page of my rails-website!</p>
-  <p>Click on the "View Posts" link to continue.</p>
-  <%= link_to 'View Posts', posts_path %>
-  <br>
-  <p>Credits: Rails 7 | Render | Amazon AWS3 </p>
-</div>
+<body class="background">
+  <div class="container">
+    <div>
+      <h1>Welcome!</h1>
+      <p>This is the home page of my rails-website!</p>
+      <p>Click on the "View Posts" link to continue.</p>
+      <%= link_to 'View Posts', posts_path %>
+      <br>
+      <p>Credits: Rails 7 | Render | Amazon AWS3</p>
+    </div>
+  </div>
+</body>
 
