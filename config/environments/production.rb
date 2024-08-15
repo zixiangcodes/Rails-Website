@@ -40,6 +40,10 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
+  config.active_storage.analyze_later = true
+  config.active_storage.queues.analysis = :active_storage_analysis
+  config.active_storage.queues.purge    = :active_storage_purge
+  config.active_storage.queues.mirror   = :active_storage_mirror
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
