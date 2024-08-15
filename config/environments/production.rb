@@ -22,7 +22,7 @@ Rails.application.configure do
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-  # config.public_file_server.enabled = false
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -44,6 +44,8 @@ Rails.application.configure do
   config.active_storage.queues.analysis = :active_storage_analysis
   config.active_storage.queues.purge    = :active_storage_purge
   config.active_storage.queues.mirror   = :active_storage_mirror
+
+
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
