@@ -14,8 +14,6 @@
     /* Removes any default margin */
 }
 
-
-
 /* Style the container to appear in front of the background */
 .container {
     background-color: rgba(255, 255, 255, 0.8);
@@ -27,9 +25,13 @@
     margin: auto;
     text-align: center;
     position: relative;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a slight shadow for depth */
+}
+
+.abc {
     top: 50%;
     transform: translateY(-50%);
     /* Vertically centers the container */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Adds a slight shadow for depth */
 }
