@@ -1,0 +1,10 @@
+<% content_for :page_specific_styles do %>
+  <%= stylesheet_link_tag 'navigation', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<div class= "navigation_panel">
+    <%= link_to 'Return to Welcome Page', root_path %> |
+    <%= link_to 'View Posts', posts_path %> |
+    <%= link_to "Make a New Post", new_post_path %> |
+    <%= link_to 'View Users', users_path %>
+</div>

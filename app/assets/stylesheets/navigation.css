@@ -1,0 +1,9 @@
+.navigation_panel {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

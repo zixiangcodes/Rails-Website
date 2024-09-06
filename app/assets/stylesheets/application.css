@@ -30,23 +30,6 @@ body {
     padding: 20px;
 }
 
-/* Style the main heading */
-h1 {
-    font-size: 3rem;
-    /* Responsive font size */
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Style the paragraph text */
-p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #666;
-}
-
 /* Style the link */
 a {
     text-decoration: none;
@@ -59,16 +42,6 @@ a:hover {
     color: #0056b3;
     /* Darker blue for hover effect */
     text-decoration: underline;
-}
-
-/* Add some spacing and styling to the container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 button,
@@ -124,3 +97,14 @@ button[type="submit"]:hover {
     /* Darker red */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Not in use */
+/* Add some spacing and styling to the container */
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */

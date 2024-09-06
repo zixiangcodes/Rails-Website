@@ -2,15 +2,18 @@
   <%= stylesheet_link_tag 'welcome', "data-turbo-track": "reload" %>
 <% end %>
 
+<%= render 'shared/navigation' %>
+
 <body class="background">
   <div class="container">
     <div>
-      <h1>Welcome!</h1>
-      <p>This is the home page of my rails-website!</p>
+      <h1><u>Welcome!</u></h1>
+      <p>This is the home page of my rails website!</p>
       <p>Click on the "View Posts" link to continue.</p>
-      <%= link_to 'View Posts', posts_path %>
+        <%= link_to 'View Posts', posts_path %> |
+        <%= link_to 'View Users', users_path %>
       <br>
-      <p>Credits: Rails 7 | Render | Amazon AWS3</p>
+      <p><strong>Credits: Ruby 3.3.4 | Rails 7.1.3.4 | Render | Amazon AWS S3</strong></p>
     </div>
   </div>
 </body>

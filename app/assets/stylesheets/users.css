@@ -1,0 +1,103 @@
+/* Set the background image for the entire page */
+.background {
+    background-image: url('/images/background.jpg');
+    /* background-image: url('/images/background.jpg'); */
+    /* url('app/assets/images/background.jpg'); */
+    background-size: cover;
+    /* Ensures the image covers the entire background */
+    /* background-position: center; */
+    /* Centers the background image */
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    /* Image will be repeating */
+    height: 100vh;
+    /* Makes the body full height */
+    /* margin: 0; */
+    /* Removes any default margin */
+    padding-bottom: 50px;
+    /* Adds padding for the bottom */
+    margin-bottom: 125px;
+}
+
+.atest {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 650px;
+    margin: 0 auto 100px;
+    /* Centers the box horizontally and ensures the bottom margin is large enough */
+    width: 90%;
+    /* Makes the box responsive */
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 18px;
+    /* Responsive font size */
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style the paragraph text */
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Style the link */
+a {
+    text-decoration: none;
+    color: #007bff;
+    /* Bootstrap blue */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    /* Darker blue for hover effect */
+    text-decoration: underline;
+}
+
+#userList {
+    /* margin-bottom: 50px; */
+}
+
+#userList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#userList li {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* not in use */
+/* Style the container to appear in front of the background */
+.xcontainer,
+.xcontainer2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 10px auto;
+    /* Changed from just 'auto' to add vertical margin */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.xcontainer {
+    position: relative;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.xcontainer2 {
+    position: absolute center;
+    top: 10px;
+}

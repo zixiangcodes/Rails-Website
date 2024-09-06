@@ -2,10 +2,13 @@
   <%= stylesheet_link_tag 'posts', "data-turbo-track": "reload" %>
 <% end %>
 
+<%= render 'shared/navigation' %>
+
 <p style="color: green"><%= notice %></p>
 
 <h1><u>Posts</u></h1>
 <h1>Shows the list of posts made so far!</h1>
+<%= link_to "[ Make a New Post ]", new_post_path %>
 <h1>- - - - - - - - </h1>
 
 <div id="posts">
@@ -21,6 +24,5 @@
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= paginate @posts %>
 <h1>- - - - - - - - </h1>
-<%= link_to 'Back to welcome page!', root_path %> <!-- Link to the welcome page -->

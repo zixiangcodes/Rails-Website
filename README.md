@@ -30,3 +30,20 @@ Postgresql (currently on render)
 * Deployment instructions
 
 * ...
+
+* Personal Comments: 
+- Originally was # class ApplicationController < ActionController::Base
+- Changing to # class ApplicationController < ActionController::Base to class ApplicationController < ActionController::API in application_controller.rb has caused issues with rendering the views.
+- I wonder what's a good solution?
+
+    # Make ApplicationController inherit from ActionController::API instead of ActionController::Base. 
+    # As with middleware, this will leave out any Action Controller modules that provide 
+    # functionalities primarily used by browser applications.
+
+- Maybe I'll create a new controller to inherit from class ApplicationController < ActionController::Base
+
+* Test (windows):
+Invoke-RestMethod -Method Post -Uri http://localhost:3000/users
+
+* Test (linux / ubuntu):
+curl -X POST localhost:3000/users 

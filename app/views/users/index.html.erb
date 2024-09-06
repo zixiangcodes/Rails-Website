@@ -1,0 +1,19 @@
+<% content_for :page_specific_styles do %>
+  <%= stylesheet_link_tag 'users', "data-turbo-track": "reload" %>
+<% end %>
+
+<%= render 'shared/navigation' %>
+
+<body class= "background">
+
+<div class= atest>
+    <h1><u>Users</u></h1>
+      <button id="createUser">Create User List</button>
+      <button id="fetchUsers">Generate User List</button>
+      <h1>- - - - - - - - </h1>
+    <div id="userList"></div>
+</div>
+
+</body>
+
+<%= javascript_include_tag 'users' %>
