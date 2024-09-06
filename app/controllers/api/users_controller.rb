@@ -10,11 +10,12 @@ module Api
         @user = User.new(user_params)
         if @user.save
             # render json: @user.as_json
-            render json: { message: "User was successfully created!" }, status: :created
+            render json: { success: true, user: @user, message: "User was successfully created!" }, status: :created
         else 
             render json: { 
+                success: false,
                 message: "Error, issue saving user, was not successfully created!", 
-                errors: @user.errors.full_messages 
+                errors: @user.errors.full_messages.join(', ')
             }, status: :unprocessable_entity
         end
       end

@@ -12,11 +12,15 @@ ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
 Rails 7.1.3.4
 
 * System dependencies
+- None but some gems are important:
+    - gem 'kaminari'            : For pagination
+    - gem 'aws-sdk-s3'          : For Amazon S3 gem
+    - gem 'image_processing'    : For image Active Storage
 
 * Configuration
 
 * Database creation
-Postgresql (currently on render)
+- Postgresql (currently on render)
 
 * Database initialization
 - Standard approach..
