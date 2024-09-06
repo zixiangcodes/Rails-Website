@@ -6,24 +6,25 @@ application up and running.
 Details:
 
 * Ruby version:
-ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
+- ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
 
 * Rails version:
-Rails 7.1.3.4
+- Rails 7.1.3.4
 
 * System dependencies
-- None but some gems are important:
-    - gem 'kaminari'            : For pagination
-    - gem 'aws-sdk-s3'          : For Amazon S3 gem
-    - gem 'image_processing'    : For image Active Storage
+- gem 'kaminari'            : For pagination
+- gem 'aws-sdk-s3'          : For Amazon S3 gem
+- gem 'image_processing'    : For image Active Storage
+- gem 'bcrypto'             : For secure password.
 
 * Configuration
+- None so far.
 
 * Database creation
 - Postgresql (currently on render)
 
 * Database initialization
-- Standard approach..
+- Standard approach.
 
 * How to run the test suite
 - None
@@ -32,8 +33,11 @@ Rails 7.1.3.4
 - None
 
 * Deployment instructions
-
-* ...
+- Firstly, setup ruby on rails as per normal.
+- Add the necessary gems above into the gemfile, then use bundle install.
+- Deploy to any site that supports Ruby on Rails.
+- Remember to create and connect it to a postgresql database.
+- TBC.
 
 * Personal Comments: 
 - Originally was # class ApplicationController < ActionController::Base
