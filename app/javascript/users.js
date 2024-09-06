@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // call and reference the ids from html
     const fetchUsersButton = document.getElementById('fetchUsers');
-    const createUserButton = document.getElementById('createUser');
+    // const createUserButton = document.getElementById('createUser');
     const createUserForm = document.getElementById('createUserForm');
     const userListContainer = document.getElementById('userList');
 
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(users => {
                 let userHTML = '<ul style="list-style-type: none; padding: 0;">';
                 users.forEach(user => {
+                    const createdAt = new Date(user.created_at).toLocaleString();
                     userHTML += `<li style="margin-bottom: 10px;">Username: ${user.username} | Email: (${user.email}) | Created At: ${user.created_at}  </li>`;
                 });
                 userHTML += '</ul>';
@@ -23,12 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Empty
-    // createUserButton.addEventListener('click', function () {
-    //     console.log("Hello!")
-
-    // });
-
     createUserForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const username = document.getElementById('username').value;
@@ -37,14 +32,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const first_name = document.getElementById('first_name').value;
         const last_name = document.getElementById('last_name').value;
         createUser({ username, email, password, first_name, last_name, });
+        console.log("Pressing submit works!")
     });
+
+    // Empty
+    // createUserButton.addEventListener('click', function () {
+    //     console.log("Hello!")
+
+    // });
 
     function createUser(userData) {
         fetch('/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+                // 'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
             },
             body: JSON.stringify({ user: userData })
         })
@@ -58,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.success) {
                     alert('User created successfully!');
                     clearForm();
+                    // fetchUsers(); 
+                    // Assuming you extract the fetch logic into a separate function
                 } else {
                     alert('Error creating user: ' + data.error);
                 }
