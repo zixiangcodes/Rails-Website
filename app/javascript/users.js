@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // call and reference the ids from html
     const fetchUsersButton = document.getElementById('fetchUsers');
     const createUserButton = document.getElementById('createUser');
+    const createUserForm = document.getElementById('createUserForm');
     const userListContainer = document.getElementById('userList');
 
+    // Generate user list from the database
     fetchUsersButton.addEventListener('click', function () {
         fetch('/api/users')
             .then(response => response.json())
@@ -20,10 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
+    // Empty
     createUserButton.addEventListener('click', function () {
         console.log("Hello!")
 
+    });
 
+    createUserForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        createUser(username);
     });
 
 

@@ -8,7 +8,16 @@
 
 <div class= atest>
     <h1><u>Users</u></h1>
-      <button id="createUser">Create User List</button>
+
+      <form id="createUserForm">
+        <input type="text" id="username" placeholder="Enter username" required>
+        <input type="email" id="email" placeholder="Enter email" required>
+        <input type="text" id="password" placeholder="Key in your password" required>
+        <input type="text" id="first_name" placeholder="Type in your first name" required>
+        <input type="text" id="last_name" placeholder="Then, enter your last name" required>
+        <button type="submit" id="createUser">Create New User</button>
+      </form>
+
       <button id="fetchUsers">Generate User List</button>
       <h1>- - - - - - - - </h1>
     <div id="userList"></div>
