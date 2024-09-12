@@ -1,14 +1,12 @@
-/* Style the main heading */
+/* Existing styles */
 h1 {
     font-size: 20px;
-    /* Responsive font size */
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-/* Style the paragraph text */
 p {
     font-size: 1.2rem;
     margin: 10px 0;
@@ -27,10 +25,10 @@ p {
     background-color: #d50000;
 }
 
+/* For image */
 .post-image-container {
     width: 100%;
     max-width: 600px;
-    /* Adjust this value as needed */
     margin: 0 auto;
 }
 
@@ -40,6 +38,38 @@ p {
     object-fit: contain;
 }
 
+/* New styles for 2x3 grid layout */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.post-card p {
+    flex-grow: 1;
+}
+
+.post-card .btn {
+    margin-top: 10px;
+}
+
+/* Existing pagination styles */
 .pagination {
     text-align: center;
     padding: 1em;
@@ -64,17 +94,22 @@ p {
     text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
 }
 
-/* Responsive Design - Small Screen Devices */
+/* Responsive Design */
 @media screen and (min-width: 768px) {
     .post-image-container {
         max-width: 600px;
-        /* Larger size for tablets and up */
     }
 }
 
 @media screen and (min-width: 1024px) {
     .post-image-container {
         max-width: 800px;
-        /* Even larger for desktops */
+    }
+}
+
+/* Additional responsive design for grid layout */
+@media screen and (max-width: 767px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
     }
 }

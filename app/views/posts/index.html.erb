@@ -11,16 +11,18 @@
 <%= link_to "[ Make a New Post ]", new_post_path %>
 <h1>- - - - - - - - </h1>
 
-<div id="posts">
+<div id="posts" class="posts-grid">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %> |
-      <%= link_to 'Edit this post', edit_post_path(post), class: 'btn btn-primary' %>
-      <%= button_to 'Delete this post', post_path(post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
-      <br>
-      <h1>- - - - - - - - </h1>
-    </p>
+    <div class="post-card">
+      <%= render post %>
+        <p>
+          <%= link_to "Show this post", post %> |
+          <%= link_to 'Edit this post', edit_post_path(post), class: 'btn btn-primary' %>
+          <%= button_to 'Delete this post', post_path(post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+          <br>
+          <h1>- - - - - - - - </h1>
+        </p>
+    </div>
   <% end %>
 </div>
 
