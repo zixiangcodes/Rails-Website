@@ -30,7 +30,14 @@
     /* Adds a slight shadow for depth */
 }
 
-.abc {
+.welcome-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Not in use */
+
+.xx {
     top: 50%;
     transform: translateY(-50%);
     /* Vertically centers the container */

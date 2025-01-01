@@ -20,6 +20,7 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
+# This will use the DATABASE_URL from the hosting website's ENV variables.
 production:
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
