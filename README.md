@@ -50,10 +50,4 @@ Personal Comments:
 
 Misc Test:
 - Invoke-RestMethod -Method Post -Uri http://localhost:3000/users (windows)
-- curl -X POST localhost:3000/users (linux / ubuntu):
-
-* Test (windows):
-Invoke-RestMethod -Method Post -Uri http://localhost:3000/users
-
-* Test (linux / ubuntu):
-curl -X POST localhost:3000/users 
+- curl -X POST localhost:3000/users (linux / ubuntu)
