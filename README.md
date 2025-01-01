@@ -1,45 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README would normally document whatever steps are necessary to get the application up and running.
 
-Details:
+# Details:
 
-* Ruby version:
+Ruby version:
 - ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
 
-* Rails version:
+Rails version:
 - Rails 7.1.3.4
 
-* System dependencies
+System dependencies
 - gem 'kaminari'            : For pagination
 - gem 'aws-sdk-s3'          : For Amazon S3 gem
 - gem 'image_processing'    : For image Active Storage
 - gem 'bcrypto'             : For secure password.
 
-* Configuration
+Configuration
 - None so far.
 
-* Database creation
+Database creation
 - Postgresql (currently on render)
+- ENVIRON variable input at render / hosting site.
 
-* Database initialization
+Database initialization
 - Standard approach.
 
-* How to run the test suite
+How to run the test suite
+- No test suite.
+
+Services (job queues, cache servers, search engines, etc.)
 - None
 
-* Services (job queues, cache servers, search engines, etc.)
-- None
-
-* Deployment instructions
+Deployment instructions
 - Firstly, setup ruby on rails as per normal.
 - Add the necessary gems above into the gemfile, then use bundle install.
 - Deploy to any site that supports Ruby on Rails.
 - Remember to create and connect it to a postgresql database.
 - TBC.
 
-* Personal Comments: 
+Personal Comments: 
 - Originally was # class ApplicationController < ActionController::Base
 - Changing to # class ApplicationController < ActionController::Base to class ApplicationController < ActionController::API in application_controller.rb has caused issues with rendering the views.
 - I wonder what's a good solution?
@@ -48,8 +48,6 @@ Details:
 - functionalities primarily used by browser applications.
 - Maybe I'll create a new controller to inherit from class ApplicationController < ActionController::Base
 
-* Test (windows):
-Invoke-RestMethod -Method Post -Uri http://localhost:3000/users
-
-* Test (linux / ubuntu):
-curl -X POST localhost:3000/users 
+Misc Test:
+- Invoke-RestMethod -Method Post -Uri http://localhost:3000/users (windows)
+- curl -X POST localhost:3000/users (linux / ubuntu):
