@@ -37,7 +37,7 @@ Deployment instructions
 - Add the necessary gems above into the gemfile, then use bundle install.
 - Deploy to any site that supports Ruby on Rails.
 - Remember to create and connect it to a postgresql database.
-- TBC.
+- Should work after you've done the above. You can create posts and add users. 
 
 Personal Comments: 
 - Originally was # class ApplicationController < ActionController::Base
@@ -50,4 +50,4 @@ Personal Comments:
 
 Misc Test:
 - Invoke-RestMethod -Method Post -Uri http://localhost:3000/users (windows)
-- curl -X POST localhost:3000/users (linux / ubuntu):
+- curl -X POST localhost:3000/users (linux / ubuntu)
