@@ -35,6 +35,16 @@
     margin: 0 auto;
 }
 
+/* For screens 480px and below */
+@media (max-width: 600px) {
+
+    .welcome-image {
+        width: 70%;
+        height: 70%;
+    }
+
+}
+
 /* Not in use */
 
 .xx {
